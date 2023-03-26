@@ -53,6 +53,25 @@ interface GigabitEthernet0/1
  switchport nonegotiate
 ```
 
+##Spanning Tree 
+
+```
+Interface g 0/0
+ switchport access vlan 10
+ switchport mode access
+ switchport nonegotiate
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+
+```
+
+Enable rapid PVST
+
+```
+Conf t
+Spanning-tree mode rapid-pvst
+```
+
 
 ## Negotiated Interface Modes
 
