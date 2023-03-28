@@ -12,6 +12,9 @@ switchport port-security maximum 1
 !MAC address apprise dynamiquement et ajoutée
 switchport port-security mac-address sticky
 
+!Les adresses MAC autorisées peuvent être fixées :
+switchport port-security mac-address 0000.0000.0003
+
 !Mode de violation -> log de sécurité est générée et paquets provenant de la source inconnue sont supprimés.
 switchport port-security violation restrict
 
