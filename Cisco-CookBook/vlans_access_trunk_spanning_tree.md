@@ -58,8 +58,7 @@ interface GigabitEthernet0/1
 ## Enable rapid PVST
 
 ```
-Conf t
-Spanning-tree mode rapid-pvst
+(config)#Spanning-tree mode rapid-pvst
 ```
 
 ## Spanning Tree 
