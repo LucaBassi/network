@@ -9,6 +9,7 @@ switchport access vlan 10
 switchport mode access
 switchport nonegotiate
 spanning-tree portfast
+spanning-tree bpduguard enable
 no shutdown
 exit
 
@@ -53,17 +54,6 @@ interface GigabitEthernet0/1
  switchport nonegotiate
 ```
 
-##Spanning Tree 
-
-```
-Interface g 0/0
- switchport access vlan 10
- switchport mode access
- switchport nonegotiate
- spanning-tree portfast
- spanning-tree bpduguard enable
-
-```
 
 Enable rapid PVST
 
@@ -71,6 +61,15 @@ Enable rapid PVST
 Conf t
 Spanning-tree mode rapid-pvst
 ```
+
+##Spanning Tree 
+
+```
+(config)#spanning-tree vlan vlan-id root [primary|secondary]
+
+(config)#spanning-tree vlan vlan-id priority priority
+```
+
 
 
 ## Negotiated Interface Modes
