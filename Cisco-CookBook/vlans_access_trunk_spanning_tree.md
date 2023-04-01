@@ -55,14 +55,14 @@ interface GigabitEthernet0/1
 ```
 
 
-Enable rapid PVST
+## Enable rapid PVST
 
 ```
 Conf t
 Spanning-tree mode rapid-pvst
 ```
 
-##Spanning Tree 
+## Spanning Tree 
 
 ```
 (config)#spanning-tree vlan vlan-id root [primary|secondary]
