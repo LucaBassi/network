@@ -72,8 +72,27 @@ router ospf 1
  network 10.0.0.28 0.0.0.3 area 0
  network 10.0.0.32 0.0.0.3 area 0
 exit
+
 ```
 
+##OSPF DR/BDR Election
+```
+R1(config)#interface fastEthernet 0/0
+R1(config-if)#ip ospf priority 200
+```
+
+## OSPF Hello and Dead Interval
+```
+(config)#interface FastEthernet 0/0
+(config-if)#ip ospf hello-interval 1 
+(config-if)#ip ospf dead-interval 3
+```
+
+##Passive interface
+```
+R1(config)#router ospf 1
+R1(config-router)#passive-interface FastEthernet 0/1
+```
 
 ## HSRP 
 ### groups are assigned the same number as the VLAN counterpart
