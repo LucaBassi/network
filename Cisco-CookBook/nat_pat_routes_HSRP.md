@@ -94,6 +94,11 @@ R1(config)#router ospf 1
 R1(config-router)#passive-interface FastEthernet 0/1
 ```
 
+## Adjust cost for 10Go/s
+```
+auto-cost reference-bandwidth 10000
+```
+
 ## HSRP 
 ### groups are assigned the same number as the VLAN counterpart
 
@@ -111,10 +116,6 @@ interface Vlan 10
 no shutdown
 ```
 
-## Adjust cost for 10Go/s
-```
-auto-cost reference-bandwidth 10000
-```
 
 ## SNMP
 
