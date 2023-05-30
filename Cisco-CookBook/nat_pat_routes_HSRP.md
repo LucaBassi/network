@@ -111,6 +111,10 @@ interface Vlan 10
 no shutdown
 ```
 
+## Adjust cost for 10Go/s
+```
+auto-cost reference-bandwidth 10000
+```
 
 ## SNMP
 
