@@ -75,7 +75,7 @@ exit
 
 ```
 
-##OSPF DR/BDR Election
+## OSPF DR/BDR Election
 ```
 R1(config)#interface fastEthernet 0/0
 R1(config-if)#ip ospf priority 200
@@ -88,7 +88,7 @@ R1(config-if)#ip ospf priority 200
 (config-if)#ip ospf dead-interval 3
 ```
 
-##Passive interface
+## Passive interface
 ```
 R1(config)#router ospf 1
 R1(config-router)#passive-interface FastEthernet 0/1
@@ -112,7 +112,7 @@ no shutdown
 ```
 
 
-SNMP
+## SNMP
 
 ```
 snmp-server community SNMPstring RO
