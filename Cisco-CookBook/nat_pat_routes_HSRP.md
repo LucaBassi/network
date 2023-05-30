@@ -99,6 +99,47 @@ R1(config-router)#passive-interface FastEthernet 0/1
 auto-cost reference-bandwidth 10000
 ```
 
+
+## Adjust cost per interface
+```
+R1(config)# interface g0/0/1
+R1(config-if)# ip ospf cost 30
+R1(config-if)# interface lo0
+R1(config-if)# ip ospf cost 10
+R1(config-if)# end
+R1#
+```
+
+## Clear OSPF
+```
+R1# clear ip ospf process
+Reset ALL OSPF processes? [no]: y
+```
+```
+clear ip ospf [pid] {process | redistribution | counters [neighbor [intf] [nbr-id]]}
+Syntax Description pid (Optional) Process ID.
+
+process
+	
+Reset OSPF process.
+redistribution
+
+Clear OSPF route redistribution.
+counters
+
+OSPF counters.
+neighbor
+
+(Optional) Neighbor statistics per interface.
+intf
+
+(Optional) Neighbor interface.
+nbr-id
+	
+(Optional) Neighbor ID.
+
+```
+
 ## HSRP 
 ### groups are assigned the same number as the VLAN counterpart
 
@@ -115,6 +156,7 @@ interface Vlan 10
  standby 10 ip 10.0.10.1
 no shutdown
 ```
+
 
 
 ## SNMP
