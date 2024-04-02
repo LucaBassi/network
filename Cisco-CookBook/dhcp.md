@@ -1,12 +1,12 @@
 ## Configure DHCP
 
 ```
-ip dhcp excluded-address 10.0.10.1 10.0.10.3
+ip dhcp excluded-address 192.168.10.1 192.168.10.3
 ip dhcp excluded-address 10.0.40.254
 
 ip dhcp pool VLAN10
- network 10.0.10.0 255.255.255.0
- default-router 10.0.10.1
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
 
 ```
 
